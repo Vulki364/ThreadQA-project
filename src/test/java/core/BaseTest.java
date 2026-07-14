@@ -9,10 +9,6 @@ public class BaseTest {
 
     @BeforeEach
     public void setUp() {
-        System.setProperty(
-                "webdriver.chrome.driver",
-                "src/test/resources/drivers/chromedriver.exe"
-        );
         Configuration.browser = "chrome";
         Configuration.browserSize ="1920x1080";
         Configuration.headless = false;
