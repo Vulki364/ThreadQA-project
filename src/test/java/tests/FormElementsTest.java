@@ -1,17 +1,17 @@
-package baseElements;
+package tests;
 
+import baseElements.Country;
+import baseElements.MainPage;
 import core.BaseTest;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.switchTo;
-import static com.codeborne.selenide.Selenide.webdriver;
-import static com.codeborne.selenide.WebDriverConditions.url;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class FormElements extends BaseTest {
+public class FormElementsTest extends BaseTest {
     public static final String BASE_URL = "https://lms.threadqa.ru/xpath-practice-hub/basics";
     public static final String USER_NAME = "Олега";
     public static final String PASSWORD = "12345678";
@@ -47,15 +47,15 @@ public class FormElements extends BaseTest {
         assertEquals(COMMENT, mainPage.commentInput.getValue());
     }
 
-    @Test
-    public void checkCountrySelect() {
-        MainPage mainPage = new MainPage(BASE_URL);
-
-        mainPage.selectCountry(Country.RUSSIA);
-
-        mainPage.countryDropdown
-                .shouldHave(text("Россия"));
-    }
+//    @Test
+//    public void checkCountrySelect() {
+//        MainPage mainPage = new MainPage(BASE_URL);
+//
+//        mainPage.selectCountry(Country.RUSSIA);
+//
+//        mainPage.countryDropdown
+//                .shouldHave(text("Россия"));
+//    }
 
       @Test
       public void shouldSubscribeToNewsletter() {

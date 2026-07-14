@@ -1,12 +1,19 @@
 package tests;
 
-import core.BaseTest;
+import io.qameta.allure.*;
 import org.junit.jupiter.api.Test;
 
-public class RegistrationTest extends BaseTest {
+@Epic("UI Tests")
+@Feature("Registration")
+public class RegistrationTest {
 
     @Test
+    @Story("User registration")
+    @Description("Checking user registration flow")
+    @Severity(SeverityLevel.CRITICAL)
     void testRegistration() {
+
         System.out.println("Тест запустился");
+
     }
 }
